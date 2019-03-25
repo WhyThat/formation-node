@@ -1,24 +1,29 @@
-import { addDaysRoute, getDaysRoute, removeDaysRoute, updateDaysRoute } from '../days'
+import { addDaysRoute, getDaysRoute, removeDaysRoute, updateDayRoute } from '../days'
 
 describe('routes: days', () => {
+  const json = jest.fn()
   let res
   beforeEach(() => {
-    res = { json: jest.fn() }
+    res = { status: jest.fn(() => ({ json })) }
   })
   test('getDays', () => {
     getDaysRoute(null, res)
-    expect(res.json).toHaveBeenCalledWith({ route: 'getDays' })
+    expect(res.status).toHaveBeenCalledWith(200)
+    expect(json).toHaveBeenCalledWith({ route: 'getDays' })
   })
   test('addDays', () => {
     addDaysRoute(null, res)
-    expect(res.json).toHaveBeenCalledWith({ route: 'addDays' })
+    expect(res.status).toHaveBeenCalledWith(201)
+    expect(json).toHaveBeenCalledWith({ route: 'addDays' })
   })
   test('updateDays', () => {
-    updateDaysRoute(null, res)
-    expect(res.json).toHaveBeenCalledWith({ route: 'updateDays' })
+    updateDayRoute(null, res)
+    expect(res.status).toHaveBeenCalledWith(202)
+    expect(json).toHaveBeenCalledWith({ route: 'updateDay' })
   })
   test('removeDays', () => {
     removeDaysRoute(null, res)
-    expect(res.json).toHaveBeenCalledWith({ route: 'removeDays' })
+    expect(res.status).toHaveBeenCalledWith(204)
+    expect(json).toHaveBeenCalledWith({ route: 'removeDays' })
   })
 })
