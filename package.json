@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "start:app": "yarn workspace @lab/app start",
+    "dev:api": "yarn workspace @lab/api dev",
     "test:api": "yarn workspace @lab/api test",
     "start:api": "yarn workspace @lab/api start",
     "next-step": "git checkout step-2"

@@ -9,7 +9,7 @@ describe('debugMiddleware', () => {
   it('should call console.log because is in `process.env.DEBUG=true`', () => {
     process.env.DEBUG = true
     const next = jest.fn()
-    debugMiddleware({ body: 'body', originalUrl: '/walou' }, '', next)
+    debugMiddleware(console.log)({ body: 'body', originalUrl: '/walou' }, '', next)
     // eslint-disable-next-line no-useless-escape
     expect(console.log).toHaveBeenCalledWith('/walou : ', JSON.stringify('body'))
     expect(next).toHaveBeenCalled()
@@ -17,7 +17,7 @@ describe('debugMiddleware', () => {
   it('should not call console.log because `process.env.DEBUG=false`', () => {
     const next = jest.fn()
     process.env.DEBUG = false
-    debugMiddleware({ body: 'body', originalUrl: '/walou' }, '', next)
+    debugMiddleware(console.log)({ body: 'body', originalUrl: '/walou' }, '', next)
     // eslint-disable-next-line no-useless-escape
     expect(console.log).not.toHaveBeenCalled()
     expect(next).toHaveBeenCalled()

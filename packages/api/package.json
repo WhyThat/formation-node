@@ -7,6 +7,7 @@
   "author": "HATON Mathieu",
   "license": "MIT",
   "scripts": {
+    "dev": "nodemon --experimental-modules .",
     "start": "node --experimental-modules .",
     "test": "jest"
   },
@@ -14,10 +15,13 @@
     "@babel/core": "^7.4.0",
     "@babel/plugin-transform-modules-commonjs": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
-    "babel-jest": "^24.5.0"
+    "babel-jest": "^24.5.0",
+    "jest": "^24.5.0",
+    "nodemon": "^1.18.10"
   },
   "dependencies": {
-    "jest": "^24.5.0"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
   },
   "jest": {
     "transform": {
