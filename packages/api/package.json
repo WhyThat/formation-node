@@ -1,0 +1,12 @@
+{
+  "name": "@lab/api",
+  "version": "0.0.1",
+  "private": true,
+  "description": "This will expose some routes to be consumed",
+  "main": "src/api.mjs",
+  "author": "HATON Mathieu",
+  "license": "MIT",
+  "scripts": {
+    "start": "node --experimental-modules ."
+  }
+}

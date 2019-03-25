@@ -1,0 +1,12 @@
+{
+  "name": "@lab/app",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Wepapp with nodejs and heroku",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "HATON Mathieu",
+  "license": "MIT"
+}

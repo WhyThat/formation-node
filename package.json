@@ -3,11 +3,15 @@
   "version": "0.0.1",
   "private": true,
   "description": "Wepapp with nodejs and heroku",
-  "main": "index.js",
   "author": "HATON Mathieu",
   "license": "MIT",
+  "workspaces": [
+    "packages/**"
+  ],
   "scripts": {
-    "next-step": "git checkout step-1"
+    "start:app": "yarn workspace @lab/app start",
+    "start:api": "yarn workspace @lab/api start",
+    "next-step": "git checkout step-2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
