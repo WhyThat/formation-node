@@ -1,33 +1,35 @@
-# Explication du projet
+# Step 1
 
-Pendant ces 2 jours nous allons créer une application qui va permettre de
-pouvoir prendre des jours dans le lab,
+Vous devez donc avoir l'arborescence suivante :
 
-Les fonctionalités de bases seront les suivantes :
+```
+  [Nom de l'application]
+    |-  packages
+    |   |-  api
+    |   |   |-  src
+    |   |   |    |- index.js
+    |   |   |-  package.json
+    |   |-  app
+    |   |   |-  src
+    |   |   |    |- index.js
+    |   |   |-  package.json
+    |-  node_modules
+    |-  package.json
+    |-  README.md
+    |-  yarn.lock
+```
 
-- Une authentification grace à LV connect
-- Un CRUD pour affecter des jours à une personne
+## Objectif de l'étape
 
-NodeJS est fait pour avoir un développement d'application modulaire, ou en
-package, pour se faire et s'obliger à respecter ce pattern, nous allons
-travailler avec les `workspaces` de `yarn`
-
-## Pour se faire nous allons devoir faire un petit peu de config pour notre environement
-
-- Installer `yarn`
-- Configurer `yarn` pour que l'on puisse utiliser des `workspaces` qui se
-  situeront dans un dossier `**/packages`
-- dans le dossier `packages`
-  - Créer un package ayant pour nom `@lab/api` dans un dossier `api`
-    - faite "pointer" le package vers un fichier `src/index.js` qui fera un
-      `console.log("hello from api")`
-  - Créer un package ayant pour nom `@lab/app` dans un dossier `app`
-    - faite "pointer" le package vers un fichier `src/index.js` qui fera un
-      `console.log("hello from app")`
-- Ajouter un "script" nommé "start:api" dans le `package.json` root, afin de
-  pouvoir executer `@lab/api`
-- Ajouter un "script" nommé "start:app" dans le `package.json` root, afin de
-  pouvoir executer `@lab/app`
+- Ajouter un script `dev:api` qui permettra d'avoir un watcher (avec `nodemon`)
+- Installer `express`
+  - Initialiser le server
+  - faire une route renvoyant un JSON `{"message": "hello world"}`
+  - créer un middleware qui affiche un console.log quand la variable
+    d'environnement `DEBUG=true` et qui passe les tests unitaires
+    (`yarn test:api`)
+  - modifier les tests unitaires, pour que la fonction puisse prendre un logger
+    custom
 
 ## passer à l'étape suivante
 
