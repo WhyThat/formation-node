@@ -13,7 +13,7 @@
     "dev:api": "yarn workspace @lab/api dev",
     "test:api": "yarn workspace @lab/api test",
     "start:api": "yarn workspace @lab/api start",
-    "next-step": "git checkout step-2"
+    "next-step": "git checkout step-3"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
