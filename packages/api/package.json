@@ -20,13 +20,16 @@
     "nodemon": "^1.18.10"
   },
   "dependencies": {
+    "@lab/config": "^0.0.1",
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19"
   },
   "jest": {
     "transform": {
       "^.+\\.m?jsx?$": "babel-jest"
     },
+    "testEnvironment": "node",
     "moduleFileExtensions": [
       "js",
       "json",

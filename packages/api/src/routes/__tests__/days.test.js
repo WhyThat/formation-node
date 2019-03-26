@@ -11,7 +11,7 @@ describe('routes: days', () => {
     expect(res.status).toHaveBeenCalledWith(200)
     expect(json).toHaveBeenCalledWith({ route: 'getDays' })
   })
-  test('addDays', () => {
+  test.skip('addDays', () => {
     addDaysRoute(null, res)
     expect(res.status).toHaveBeenCalledWith(201)
     expect(json).toHaveBeenCalledWith({ route: 'addDays' })

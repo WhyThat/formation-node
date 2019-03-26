@@ -1,0 +1,12 @@
+{
+  "name": "@lab/config",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Config package",
+  "main": "src/index.mjs",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "HATON Mathieu",
+  "license": "MIT"
+}
