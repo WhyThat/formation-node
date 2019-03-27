@@ -1,0 +1,19 @@
+{
+  "name": "@lab/websocket",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Config package",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "postbuild": "renamer  --find '.js' --replace '.mjs' './dist/**/*.js'"
+  },
+  "author": "HATON Mathieu",
+  "license": "MIT",
+  "devDependencies": {
+    "renamer": "^1.1.1",
+    "typescript": "^3.3.4000"
+  }
+}

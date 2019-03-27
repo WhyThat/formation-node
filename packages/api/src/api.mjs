@@ -1,3 +1,4 @@
+import { add } from '@lab/websocket'
 import bodyParser from 'body-parser'
 import express from 'express'
 import { debugMiddleware } from './middleware'
@@ -11,6 +12,7 @@ const main = async () => {
   app.use(debugMiddleware(console.log))
 
   routes(app)
+  console.log(add(1, 2))
   await db()
 
   app.listen(3000, () => {
