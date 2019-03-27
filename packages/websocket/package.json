@@ -13,7 +13,9 @@
   "author": "HATON Mathieu",
   "license": "MIT",
   "devDependencies": {
+    "@types/ws": "^6.0.1",
     "renamer": "^1.1.1",
-    "typescript": "^3.3.4000"
+    "typescript": "^3.3.4000",
+    "ws": "^6.2.0"
   }
 }
