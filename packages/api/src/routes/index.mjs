@@ -1,5 +1,6 @@
 import { addDaysRoute, getDaysRoute, removeDaysRoute, updateDayRoute } from './days'
 import fallbacks from './fallbacks'
+import { addUserRoute } from './user'
 
 export default (app) => {
   app.post('/days', addDaysRoute)
@@ -7,5 +8,6 @@ export default (app) => {
   app.get('/days', getDaysRoute)
   app.put('/day/:id', updateDayRoute)
 
+  app.post('/addUser', addUserRoute)
   fallbacks(app)
 }
